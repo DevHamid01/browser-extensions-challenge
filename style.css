@@ -1,0 +1,207 @@
+:root {
+    --bg-light: #f4f6fa;
+    --bg-dark: #121726;
+    --card-light: #fff;
+    --card-dark: #1e2333;
+    --text-light: #333;
+    --text-dark: #f1f1f1;
+    --primary: #ff4c60;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 20px;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+    max-width: 1440px;
+    min-width: 375px;
+  }
+  
+  body.light {
+    background: var(--bg-light);
+    color: var(--text-light);
+  }
+  
+  body.dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: inherit;
+    
+  }
+  header.dark{
+    background-color: hsl(226, 25%, 17%);
+  }
+  .extention{
+    display: flex;
+    justify-content: space-between;
+  }
+  span.extensions{
+    padding-top: 20px;
+    font-weight: bold;
+    align-items: center;
+    font-size: large;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 8px;
+    
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .remove{
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-desc{
+    width: 300px ;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  
+  #themeToggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: white;
+    transition: 0.3s;
+  }
+  .filter-btn:hover{
+    border: 2px solid #ff4c60;
+    color: #ff4c60;
+  }
+  
+  .filter-btn.active {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .extensions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  
+  .card {
+    padding: 1rem;
+    border-radius: 20px;
+    background: var(--card-light);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 300px;
+    
+  }
+  .detail{
+    width: 150px;
+  }
+  body.dark .card {
+    background: var(--card-dark);
+  }
+  
+  .card h3 {
+    margin: 0;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    margin: 0;
+    width: 200px;
+    height: 60px;
+  }
+  
+  .remove-btn {
+    background: var(--bg-light);
+    color: black;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .remove-btn:hover{
+    border: 2px solid #ff4c60;
+    color: #ff4c60;
+  }
+  
+  .toggle {
+    align-self: flex-end;
+  }
+  
+  input[type="checkbox"] {
+    appearance: none;
+    width: 36px;
+    height: 18px;
+    background: #ccc;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+  }
+  input:hover{
+    border: 2px solid #ff4c60;
+    color: #ff4c60;
+  }
+  
+  input[type="checkbox"]:checked {
+    background: var(--primary);
+  }
+  
+  input[type="checkbox"]:checked::before {
+    left: 20px;
+  }
+  .attribution{
+    text-align: center;
+  }
+  @media screen and (max-width: 500px) {
+    .extention{
+      display: block;
+      text-align: center;
+    
+    }
+    .filters{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+  }

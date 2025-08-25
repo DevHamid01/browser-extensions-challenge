@@ -193,6 +193,9 @@
     text-align: center;
   }
   @media screen and (max-width: 500px) {
+    body{
+      margin: 10pxgit;
+    }
     .extention{
       display: block;
       text-align: center;
